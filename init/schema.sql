@@ -1,5 +1,5 @@
 -- SQLite
-CREATE TABLE "events" (
+CREATE TABLE events (
     "id" TEXT NOT NULL PRIMARY KEY,
     "title" TEXT NOT NULL,
     "details" TEXT,
@@ -7,7 +7,7 @@ CREATE TABLE "events" (
     "maximum_attendees" INTEGER
 );
 
-CREATE TABLE "attendees" (
+CREATE TABLE attendees (
     "id" TEXT NOT NULL PRIMARY KEY,
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE "attendees" (
     CONSTRAINT "attendees_event_id_fkey" FOREIGN KEY ("event_id") REFERENCES "events" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
-CREATE TABLE "check_ins" (
+CREATE TABLE check_ins (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "attendeeId" TEXT NOT NULL,
