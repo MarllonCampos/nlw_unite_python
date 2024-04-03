@@ -18,8 +18,9 @@ def test_insert_event():
     
 @pytest.mark.skip(reason="Busca Desnecessária")
 def test_get_event_by_id():
-    event_id = "meu-uuid-e-nois2"
+    event_id = "meu-uuid-e-nois21231321312"
     events_repository = EventsRepository()
     response = events_repository.get_event_by_id(event_id)
+    
     print(response)
-    print(response.title)
+    # print(response.title)
