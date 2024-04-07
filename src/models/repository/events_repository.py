@@ -62,7 +62,7 @@ class EventsRepository:
                         "attendeesAmount": 0
                     }
             return {
-                "maximum_attendees": event_count[0].maximum_attendees,
+                "maximumAttendees": event_count[0].maximum_attendees,
                 "attendeesAmount": len(event_count)
             }
             
