@@ -13,7 +13,7 @@ class CheckInRepository:
           database.session.commit()
           return attendee_id
         except IntegrityError as excep:
-          raise Exception("Check in ja cadastrado!")
+          raise HttpClonfictError("Check in ja cadastrado!")
             
         except Exception as exception:
           database.session.rollback()
